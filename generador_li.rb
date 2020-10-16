@@ -1,7 +1,14 @@
-cont = ARGV[0].to_i - 2
-ul = "<ul>"
+cont = ARGV[0].to_i
+ul=""
 cont.times do |i| 
-    ul += "\n\t<li>#{i+1}</li>"
+    if i == 0
+        ul +="<ul>"
+    elsif
+        i == cont-1
+        ul +="\n</ul>"
+    else
+        ul +="\n\t<li>#{i}</li>"
+    end
 end
-ul +="\n</ul>"
+
 puts ul
